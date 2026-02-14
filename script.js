@@ -65,3 +65,19 @@ function benar() {
 function bukaSurat() {
   document.getElementById("isiSurat").style.display = "block";
 }
+
+document.addEventListener("click", function startMusic(){
+    let music = document.getElementById("bgMusic");
+    music.volume = 0;
+    music.play();
+
+    let fade = setInterval(function(){
+        if(music.volume < 0.5){
+            music.volume += 0.02;
+        } else {
+            clearInterval(fade);
+        }
+    },200);
+
+    document.removeEventListener("click", startMusic);
+});
