@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: #ffe6f2;
+  color: #ff4da6;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+  margin-top: 80px;
+}
+
+h1, h2, p {
+  padding: 10px;
+}
+
+button {
+  background: #ff99cc;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  margin: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff66b2;
+  transform: scale(1.1);
+}
+
+.love-icon {
+  width: 120px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.love-icon:active {
+  transform: scale(1.2);
+}
+
+/* Animasi hati jatuh */
+.hearts span {
+  position: fixed;
+  top: -10px;
+  font-size: 20px;
+  animation: fall 8s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* Responsive HP */
+@media (max-width: 480px) {
+  h1 { font-size: 22px; }
+  h2 { font-size: 18px; }
+  button { font-size: 14px; padding: 10px 16px; }
+}
